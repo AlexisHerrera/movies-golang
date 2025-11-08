@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package csv_data;
+
+import "google/protobuf/timestamp.proto";
+
+option go_package = "movies-golang/gen/go/csv_data";
+
+message Rating {
+  int32 userId = 1;
+  int32 movieId = 2;
+  float rating = 3;
+  google.protobuf.Timestamp timestamp = 4;
+}
